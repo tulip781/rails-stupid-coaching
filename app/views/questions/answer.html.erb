@@ -1,0 +1,18 @@
+
+<div class='whole-box'>
+<h1>Stupid Coaching</h1>
+
+<% if @question == 'I am going to work' %>
+<%  coach_answer = 'Great!' %>
+<% elsif @question.chomp[-1] == '?' %>
+<%  coach_answer = "Silly question, get dressed and go to work!" %>
+<% else %>
+<%  coach_answer = "I don't care, get dressed and go to work!" %>
+<% end %>
+<h3> -<%=@question %></h3>
+<p><i> You</i>  You</p>
+<h3> -<%= coach_answer %></h3>
+<p> <i>Your Coach</i></p>
+
+<p><%= link_to "Ask a New Question", ask_path %></p>
+</div>
